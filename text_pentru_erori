@@ -1,0 +1,25 @@
+//in global:
+
+
+Function $char globalfunct ($int a)  //(4) a function is not defined more than once with the same signature
+$int k:=4;
+ Endfunction;
+
+$float k:=6; //(2) a variable should not be declared more than once;
+
+
+
+
+// in main
+
+     use:=(k * Gigel.suma(((77*7)%(77+777)), globalfunct( [7][8] mat, [2][4][5]cub2), ([7] myvect % 2), nr1)); // (1)any variable that appears in a program has been previously defined;  &&  (3)a variable appearing in the right side of an expression should have been initialized explicitly;
+
+     v++; //(1)any variable that appears in a program has been previously defined;
+
+     strrev(k);
+
+
+     Eval(str_empty) [str_empty]; //(8) in any call to the Eval, the parameter has type int.
+
+    diferenta(k,nr1);//(5) a function that is called in the program has been defined
+

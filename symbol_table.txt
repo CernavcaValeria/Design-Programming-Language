@@ -1,0 +1,57 @@
+
+  [Nume]	     [Type]              [Scop]           [Size]          [Value]
+================================================================================
+ neinit      ||   $int..........||   rol_global....||   Variabila....||   NON_VAL
+ k           ||   $float........||   rol_global....||   Variabila....||   99
+ i           ||   $int..........||   rol_global....||   Variabila....||   123
+ use         ||   $int..........||   rol_global....||   Variabila....||   7
+ some        ||   $int..........||   rol_global....||   Variabila....||   2
+ globalparam ||   $char.........||   rol_global....||   Variabila....||   NON_VAL
+ expr1       ||   $bool.........||   rol_global....||   Variabila....||   NON_VAL
+ nr1         ||   $float........||   rol_global....||   Variabila....||   555
+ length      ||   $int..........||   rol_global....||   Variabila....||   NON_VAL
+ expr_eval   ||   $int..........||   rol_global....||   Variabila....||   NON_VAL
+ myvect      ||   $float........||   rol_global....||   Vectorul.....||   2
+ matrix      ||   $int..........||   rol_global....||   Matricea.....||   3,8
+ cub         ||   $int..........||   rol_global....||   Cub..........||   4,5,4
+ str_init    ||   $string.......||   rol_global....||   Variabila....||   NON_VAL
+ str_empty   ||   $string.......||   rol_global....||   Variabila....||   NON_VAL
+ pi          ||   $constfloat...||   rol_global....||   Variabila....||   1144118032
+ myvect      ||   $float........||   functie.......||   Vectorul.....||   3
+ matrice     ||   $int..........||   functie.......||   Matricea.....||   9,8
+ cub         ||   $int..........||   functie.......||   Cub..........||   4,5,4
+ str_init    ||   $string.......||   functie.......||   Variabila....||   NON_VAL
+ str_empty   ||   $string.......||   functie.......||   Variabila....||   NON_VAL
+ secondmatrix||   $float........||   functie.......||   Matricea.....||   NON_VAL
+ real        ||   $int..........||   clasa.........||   Variabila....||   1
+ imag        ||   $int..........||   clasa.........||   Variabila....||   2
+ gen         ||   $string.......||   clasa.........||   Variabila....||   NON_VAL
+ an_nastere  ||   $int..........||   clasa.........||   Variabila....||   1999
+ numeElev    ||   $constchar....||   clasa.........||   Variabila....||   NON_VAL
+ myvect      ||   $float........||   clasa.........||   Vectorul.....||   3
+ matrice     ||   $int..........||   clasa.........||   Matricea.....||   9,8
+ cub         ||   $int..........||   clasa.........||   Cub..........||   4,5,4
+ FUNCTIE     ||   $int..........||   functie.......||   Variabila....||   NON_VAL
+ i           ||   $int..........||   iterator......||   Variabila....||   0
+
+
+
+
+
+
+ [Nume functie]        [Type]                  [Parametrii functiei]	        [Scop]					
+=========================================================================================
+ without_param ||   $bool...............||   ( )............................||   globala
+ without_param ||   $bool...............||   ( $char param )................||   globala
+ globalfunct   ||   $char...............||   ( $char globalparam )..........||   globala
+ suma          ||   $int................||   ( $float nr1 $int use )........||   metoda
+
+
+
+
+
+
+ [Nume clasa]  
+=============
+ numarComplex
+ Elev

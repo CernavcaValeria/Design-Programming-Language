@@ -1,0 +1,170 @@
+//Cernavca Valeria si Julia Bompa
+
+#include <biblioteca1.h>
+#include <biblioteca2.h>
+
+// declaratii variabile, constante, vectori, matrici, cub
+
+
+$int neinit;
+$float k :=99;
+$int i:=123;
+$int use :=7;
+$int some := 2;
+$char globalparam;
+$bool expr1;
+$float nr1 := 555;
+$int length;
+$int expr_eval;
+
+
+$float  [6] myvect:=2;  	           //string unidimesional
+$int  [7][7] matrix:={3,8};	          // doi-dimesional
+$int [8][8][8] cub := {4,5,4};  //tri-dimesional
+
+$string str_init := "abcd"; //string initializat
+$string str_empty;         //string vid
+
+
+$constfloat pi:= 3.14;    // constanta initializata
+
+
+//frunctie fara parametru
+  Function $bool without_param()
+	use := (use + nr1);
+        $float  [6] myvect:=3;
+         $int  [7][7] matrice:={9,8};
+ 	$int [8][8][8] cub := {4,5,4};
+  Endfunction;
+ Function $bool without_param($char param)
+	
+  Endfunction;
+
+
+
+// funtie globala
+  Function $char globalfunct ($char globalparam)
+    $string str_init := "abcd";
+    $string str_empty;
+    some := 10;
+    $float [77][77] secondmatrix;
+  Endfunction;
+
+
+
+// clase
+
+Class numarComplex
+
+    $int real := 1;
+    $int imag := 2;
+
+Endclass; numarCompex ncx1;
+
+
+
+
+Class Elev
+
+   $string gen := "masculin";
+   $int an_nastere := 1999;
+   $constchar numeElev;
+        $float  [6] myvect:=3;
+        $int  [7][7] matrice:={9,8};
+ 	$int [8][8][8] cub := {4,5,4};
+
+  Function $int suma ($float nr1 , $int use)
+	use := (use + nr1);
+	$int FUNCTIE;
+  Endfunction;
+
+Endclass; Elev Gigel; Elev Boris; Elev Ivan; //am definit mai multe obiecte
+
+
+
+IntMain
+
+
+expr1:=(k * Gigel.suma(((77*7)%(77+777)), globalfunct( [7][8] matrice, some), ([7] myvect % 2), nr1));
+//Eval(expr1) [expr1];
+
+//Decrement si  Increment
+	k--;
+	k++;
+
+
+
+// Apel functie din clasa Elev
+	Gigel.suma ( ([7] myvect % 2) , (2*2), globalfunct(k, some), k, nr1); //in loc de ceva cub2
+
+
+
+// Apel functieii cu parametru si fara parametru
+	globalfunct(nr1,10);
+	without_param();
+
+
+	
+// Operatii cu string: inversare, concatenare, comparare , aflarea lungimii unui sir
+	strrev(str_init);
+
+	length := strlen("valeria");
+	length := strlen(str_init);
+
+	~if(strcmp(str_init, "compare")==0) 
+        ~then
+		strcat(str_init, "concate");
+	~thenend;
+
+
+
+// INSTRUCTIUNEA: while 
+	~while([8][9] matrix != ((88%33)/(1+555)))
+		[0] myvect := (((67%2)%2)+1111);
+	~whileend;
+
+
+
+// INSTRUCTIUNEA: for
+	~for ($int i := 0; i <= 10; i++)
+		k--;
+	~forend;
+	
+	i:= (5 + 6);
+
+
+
+// INSTRUCTIUNEA: if
+	~if ( (((12==12) && (23>11)) || (6>=2))==1 ) 
+        ~then 
+		Gigel.an_nastere := ((777 + globalfunct(7 , ((77*[7] myvect)%(77+777)))) * [7] myvect);
+	~thenend;
+
+
+
+
+// INSTRUCTIUNEA: if + else //+ Apelez un camp din clasa
+	~if((Gigel.an_nastere >= 1999) && (Boris.an_nastere==2000)) 
+        ~then
+		Ivan.an_nastere := 1998;
+	~thenend
+	~else
+		Ivan.an_nastere := 2000;
+	~elseend;
+
+
+//Functia Eval
+k:=5;
+expr_eval:=(((expr1/5)-(4*2))+1);
+Eval(expr_eval+5) [expr_eval];
+
+
+// Afisare 
+        use:= (99+1);
+        print(use, $int);
+	print( an_nastere, $int);
+
+
+
+End
+
